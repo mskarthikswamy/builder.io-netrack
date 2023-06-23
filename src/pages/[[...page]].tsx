@@ -132,6 +132,10 @@ Builder.registerComponent(dynamic(() => import('../components/journey')), {
           type: 'string',
         },
         {
+          name: 'subheading',
+          type: 'string',
+        },
+        {
           name: 'content',
           type: 'string',
         },

@@ -1,6 +1,6 @@
 import React from 'react'
 
-type review = { heading: string, content: string }
+type review = { heading: string, subheading: string, content: string }
 
 interface props {
     reviews: review[]
@@ -9,12 +9,13 @@ interface props {
 const Journey = (props: props) => {
 
     return (<>
-        <div>{props?.reviews?.map((review) => {
+        <div>{props?.reviews[0]?.heading}</div>
+        {props?.reviews?.map((review) => {
             return (<>
-                <h2>{review?.heading}</h2>
+                <h2>{review?.subheading}</h2>
                 <p>{review?.content}</p>
             </>)
-        })}</div>
+        })}
 
     </>)
 }
