@@ -5,6 +5,7 @@ import DefaultErrorPage from 'next/error';
 import Head from 'next/head';
 import { Builder } from '@builder.io/react'
 import dynamic from 'next/dynamic';
+import '@builder.io/widgets';
 // import MyButton from '@/components/button';
 // import MyButton from '@/components/button';
 
@@ -167,6 +168,37 @@ Builder.registerComponent(dynamic(() => import('../components/expertiseSection')
           name: "info",
           type: "string"
         }
+
+      ],
+    }
+  ],
+})
+Builder.registerComponent(dynamic(() => import('../components/menuBar')), {
+  name: 'MenuBar',
+  inputs: [
+    {
+      name: 'reviews',
+      type: 'list',
+      defaultValue: [
+        {
+          reviewText: 'hello'
+        }],
+      subFields: [
+        {
+          name: 'heading',
+          type: 'string',
+        },
+        {
+          name: "dropList",
+          type: "list",
+          subFields: [
+            {
+              name: 'content',
+              type: 'string',
+            },
+          ]
+        },
+
 
       ],
     }
