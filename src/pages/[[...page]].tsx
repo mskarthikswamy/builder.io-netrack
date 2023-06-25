@@ -198,21 +198,26 @@ Builder.registerComponent(dynamic(() => import('../components/menuBar')), {
         {
           name: 'heading',
           type: 'string',
-        },
+        },],
+    },
+  ],
+})
+Builder.registerComponent(dynamic(() => import('../components/dropdownMenu')), {
+  name: 'DropDown Bar',
+  inputs: [
+    {
+      name: 'reviews',
+      type: 'list',
+      defaultValue: [
         {
-          name: "dropList",
-          type: "list",
-          subFields: [
-            {
-              name: 'content',
-              type: 'string',
-            },
-          ]
-        },
-
-
-      ],
-    }
+          reviewText: 'hello'
+        }],
+      subFields: [
+        {
+          name: 'heading',
+          type: 'string',
+        },],
+    },
   ],
 })
 
