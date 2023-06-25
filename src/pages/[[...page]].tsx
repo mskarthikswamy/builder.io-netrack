@@ -81,6 +81,10 @@ Builder.registerComponent(dynamic(() => import('../components/aboutUs')), {
           name: 'content',
           type: 'string',
         },
+        {
+          name: 'link',
+          type: 'string',
+        }
       ],
     }
   ],
