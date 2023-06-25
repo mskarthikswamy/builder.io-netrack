@@ -168,6 +168,13 @@ Builder.registerComponent(dynamic(() => import('../components/expertiseSection')
           name: "info",
           type: "string"
         }
+        , {
+          name: 'image',
+          type: 'file',
+          allowedFileTypes: ['jpeg', 'jpg', 'png', 'svg'],
+          required: true,
+
+        },
 
       ],
     }
