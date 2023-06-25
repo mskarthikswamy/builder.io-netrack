@@ -8,23 +8,26 @@ interface props {
 const ExpertiseSection = (props: props) => {
     return (<>
 
-        <h2 style={{ textAlign: "center", maxWidth: "900px", margin: "0 auto" }}>{props?.reviews[0]?.heading}</h2>
+        <h1 style={{ textAlign: "center", maxWidth: "550px", margin: "0 auto" }}>{props?.reviews[0]?.heading}</h1>
         <div>
-            <p style={{ textAlign: "center", maxWidth: "900px", margin: "0 auto", paddingTop: "12px", color: " #6d6d6d" }}>{props?.reviews[0]?.content}</p>
+            <p style={{ fontWeight: "1px", textAlign: "center", maxWidth: "900px", margin: "0 auto", marginTop: "30px", color: " #6d6d6d" }}>{props?.reviews[0]?.content}</p>
         </div>
 
-        <div style={{ display: "flex", height: "200px", gap: "5px", margin: "20px 20px 20px 20px" }}>
+        <div style={{ display: "flex", height: "200px", gap: "30px", margin: "90px 90px 60px 60px" }}>
             {props?.reviews?.map((review) => {
-
-                return <>
-                    <div style={{ padding: "2px 16px", width: "40%", background: "#22316a" }}>
-                        <p style={{ color: "white", textAlign: "center", marginTop: "60px" }}>{review?.info}</p>
-                    </div>
-
-
+                if (review?.info?.length > 0) {
+                    return <>
+                        <div style={{ padding: "2px 16px", width: "200px", background: "#22316a", height: "200px", borderRadius: "30px" }}>
+                            <p style={{ width: "100%", position: "relative", color: "white", textAlign: "center", alignItems: "center", marginTop: "90px" }}>{review?.info}</p>
+                        </div>
 
 
-                </>
+
+
+                    </>
+                } else { null }
+
+
 
 
             })}

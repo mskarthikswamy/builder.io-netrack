@@ -30,7 +30,7 @@ const MissionSection = (props: props) => {
         return (<>
             <div style={{ display: "flex" }}>
                 <div>
-                    <img src={props?.reviews[1]?.image} style={{ width: "272px", height: "222px" }}></img>
+                    <img src={props?.reviews[1]?.image} style={{ width: "277px", height: "200px" }}></img>
                 </div>
                 <div style={{ marginTop: "30px" }}>
                     <h3 style={{ fontWeight: "800px", fontFamily: "sans-serif" }}>{props?.reviews[1]?.label}</h3>
@@ -59,7 +59,7 @@ const MissionSection = (props: props) => {
     return (
         <div>
             <div style={{ textAlign: "center" }}>
-                <h2 style={{ fontWeight: "800" }}>Our Mission</h2>
+                <h1 style={{ fontWeight: "800", fontFamily: "sans-serif" }}>Our Mission</h1>
                 <div style={{ padding: "60px , 20px , 60px", fontSize: "20px", color: "#6d6d6d" }}>
                     <p>Unlocking the power of technology to transform lives and businesses - NetTrackers, your partner for progress and success!!!</p>
                 </div>
